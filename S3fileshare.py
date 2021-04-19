@@ -71,5 +71,4 @@ def uploadFileS3(FILE, S3_BUCKET, OBJECT, EXPIRY):
 url = uploadFileS3(FILE, S3_BUCKET, OBJECT, EXPIRY)
 s = pyshorteners.Shortener()
 if url is not None:
-	response = requests.get(url)
 	print(s.qpsru.short(url))
