@@ -23,6 +23,7 @@ parser.add_argument("-o", "--object", help = "S3 object name", required=False, t
 parser.add_argument("-f", "--file", help = "File name", required=True, type=str)
 parser.add_argument("-r", "--region", help = "Region", required=False, default=None, type=str)
 parser.add_argument("-e", "--expiry", help = "Expiry in seconds", required=True, default=3600, type=int)
+parser.add_argument("-s", "--short", help = "Require shortened URL", action="store_true")
 args = parser.parse_args()
 
 S3_BUCKET = args.bucket
@@ -69,6 +70,9 @@ def uploadFileS3(FILE, S3_BUCKET, OBJECT, EXPIRY):
 	return response
 
 url = uploadFileS3(FILE, S3_BUCKET, OBJECT, EXPIRY)
-s = pyshorteners.Shortener()
-if url is not None:
-	print(s.qpsru.short(url))
+if args.short:
+	s = pyshorteners.Shortener()
+	if url is not None:
+		print(s.qpsru.short(url))
+else:
+	print(url)
