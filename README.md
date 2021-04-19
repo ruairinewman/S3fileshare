@@ -8,13 +8,19 @@ Upload file to S3
 
 optional arguments:
   -h, --help            show this help message and exit
+
   -b BUCKET, --bucket BUCKET
-                        S3 bucket name
+                        _S3 bucket name_
+
   -o OBJECT, --object OBJECT
-                        S3 object name
-  -f FILE, --file FILE  File name
+                        _S3 object name_
+
+  -f FILE, --file FILE  _File name_
+
   -r REGION, --region REGION
-                        Region
+                        _Region_
+
   -e EXPIRY, --expiry EXPIRY
-                        Expiry in seconds
+                        _Expiry in seconds_
+
 $
