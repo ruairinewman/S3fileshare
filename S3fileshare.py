@@ -15,7 +15,7 @@ import requests
 logname = 's3upload.log'
 logdir = '/logs/'
 logfile = os.environ["HOME"] + logdir + logname
-logging.basicConfig(filename=logfile, encoding='utf-8', level=logging.DEBUG)
+logging.basicConfig(filename=logfile, encoding='utf-8', level=logging.WARN)
 
 parser = argparse.ArgumentParser(description="Upload file to S3")
 parser.add_argument("-b", "--bucket", help = "S3 bucket name", required=True, type=str)
