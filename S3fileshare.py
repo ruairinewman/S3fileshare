@@ -43,7 +43,7 @@ def uploadFileS3(FILE, S3_BUCKET, OBJECT, EXPIRY):
 	                    multipart_chunksize=1024*10, use_threads=True)
 	filename = FILE
 	bucket = S3_BUCKET
-	key = os.path.basename(OBJECT)
+	key = OBJECT
 	expiration = EXPIRY
 
 	mime = magic.Magic(mime=True)
