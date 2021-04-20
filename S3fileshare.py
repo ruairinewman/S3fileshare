@@ -25,7 +25,7 @@ parser.add_argument("-b", "--bucket", help = "S3 bucket name", required=False, t
 parser.add_argument("-o", "--object", help = "S3 object name", required=False, type=str)
 parser.add_argument("-f", "--file", help = "File name", required=True, type=str)
 parser.add_argument("-r", "--region", help = "Region", required=False, default=None, type=str)
-parser.add_argument("-e", "--expiry", help = "Expiry in seconds", required=True, default=3600, type=int)
+parser.add_argument("-e", "--expiry", help = "Expiry in seconds", required=False, default=3600, type=int)
 parser.add_argument("-s", "--short", help = "Require shortened URL", action="store_true")
 args = parser.parse_args()
 
