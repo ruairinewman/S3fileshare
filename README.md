@@ -1,6 +1,14 @@
 # S3fileshare
 Python util to upload a file to a named S3 bucket, and retrieve an expiring URL for resulting S3 object
 
+## Features
+* Bucket region autodetect
+* Random bucket name auto-generated if not specified
+* New bucket ACL defaults to 'private'
+* Expiry defaults to 3600s/1hr
+* Supports outputting short URL
+
+```
 usage: S3fileshare.py [-h] -b BUCKET [-o OBJECT] -f FILE [-r REGION] -e EXPIRY [-s]
 
 Upload file to S3
@@ -23,4 +31,7 @@ optional arguments:
                         _Expiry in seconds_
 
   -s, --short           _Require shortened URL_
+	
+	--acl           _specify canned ACL (defaults to 'private')_
 
+```
